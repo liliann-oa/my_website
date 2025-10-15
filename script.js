@@ -83,6 +83,9 @@ const aboutSection = document.querySelector('.about');
 const serviceSection = document.querySelector('.services');
 const contactSection = document.querySelector('.contact');
 const portfolioSection = document.querySelector('.portfolio');
+const emoSection = document.querySelector('.emotionally');
+const ihireSection = document.querySelector('.ihire');
+const webSection = document.querySelector('.portweb');
 
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -95,30 +98,45 @@ navLinks.forEach(link => {
             serviceSection.classList.add('hidden');
             contactSection.classList.add('hidden');
             portfolioSection.classList.add('hidden');
+            emoSection.classList.add('hidden');
+            ihireSection.classList.add('hidden');
+            webSection.classList.add('hidden');
         } else if (target === 'about') {
             homeSection.classList.add('hidden');
             aboutSection.classList.remove('hidden');
             serviceSection.classList.add('hidden');
             contactSection.classList.add('hidden');
             portfolioSection.classList.add('hidden');
+            emoSection.classList.add('hidden');
+            ihireSection.classList.add('hidden');
+            webSection.classList.add('hidden');
         } else if (target === 'services') {
             homeSection.classList.add('hidden');
             aboutSection.classList.add('hidden');
             serviceSection.classList.remove('hidden');
             contactSection.classList.add('hidden');
             portfolioSection.classList.add('hidden');
+            emoSection.classList.add('hidden');
+            ihireSection.classList.add('hidden');
+            webSection.classList.add('hidden');
         } else if (target == 'contact'){
           homeSection.classList.add('hidden');
           aboutSection.classList.add('hidden');
           serviceSection.classList.add('hidden');
           contactSection.classList.remove('hidden');
+          emoSection.classList.add('hidden');
           portfolioSection.classList.add('hidden');
+          ihireSection.classList.add('hidden');
+          webSection.classList.add('hidden');
         } else if (target == 'portfolio'){
           portfolioSection.classList.remove('hidden');
           aboutSection.classList.add('hidden');
           homeSection.classList.add('hidden');
           serviceSection.classList.add('hidden');
           contactSection.classList.add('hidden');
+          ihireSection.classList.add('hidden');
+          webSection.classList.add('hidden');
+          emoSection.classList.add('hidden');
         }
 
         // Update active link
@@ -126,6 +144,66 @@ navLinks.forEach(link => {
         link.classList.add('active');
     });
 });
+
+const emotionally = document.getElementById('emotionally');
+emotionally.onclick = function(){
+  
+  portfolioSection.classList.add('hidden');
+  emoSection.classList.remove('hidden');
+}
+
+const ihire = document.getElementById('ihire');
+ihire.onclick = function(){
+  portfolioSection.classList.add('hidden');
+  emoSection.classList.add('hidden');
+  ihireSection.classList.remove('hidden');
+}
+
+const next1 = document.getElementById('next1');
+next1.onclick = function(){
+  portfolioSection.classList.add('hidden');
+  emoSection.classList.add('hidden');
+  ihireSection.classList.remove('hidden');
+  webSection.classList.add('hidden');
+}
+
+const next2 = document.getElementById('next2');
+next2.onclick = function(){
+  portfolioSection.classList.add('hidden');
+  emoSection.classList.add('hidden');
+  ihireSection.classList.add('hidden');
+  webSection.classList.remove('hidden');
+}
+
+const web = document.getElementById('portweb');
+web.onclick = function(){
+  webSection.classList.remove('hidden');
+  portfolioSection.classList.add('hidden');
+  emoSection.classList.add('hidden');
+  ihireSection.classList.add('hidden');
+}
+
+const back1 = document.getElementById('back1');
+back1.onclick = function(){
+  portfolioSection.classList.add('hidden');
+  ihireSection.classList.add('hidden');
+  emoSection.classList.remove('hidden');
+}
+
+const back2 = document.getElementById('back2');
+back2.onclick = function(){
+  portfolioSection.classList.add('hidden');
+  ihireSection.classList.remove('hidden');
+  emoSection.classList.add('hidden');
+  webSection.classList.add('hidden');
+}
+
+const about = document.getElementById('abtn');
+about.onclick = function(){
+  homeSection.classList.add('hidden');
+  aboutSection.classList.remove('hidden');
+
+}
 
 
 const flap = document.querySelector(".fun-fact-flap");
